@@ -25,8 +25,8 @@ app.listen(PORT, () => {
 
 const https = require('https');
 const sites = [
-  '',
-  ''
+  'https://zarin-luxury-rings-backend.onrender.com',
+  'https://zarin-luxury-rings-frontend.onrender.com'
 ];
 
 setInterval(() => {
