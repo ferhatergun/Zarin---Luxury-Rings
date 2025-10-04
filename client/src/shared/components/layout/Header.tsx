@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 
 interface HeaderProps {
@@ -46,8 +47,13 @@ export default function Header({ showFullNav = true }: HeaderProps) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 cursor-pointer">
-            <img src="/logo.png" alt="Zarin Logo" className="w-30" />
+          <Link href="/" className="cursor-pointer">
+            <Image
+              src="/logo.png"
+              alt="Zarin Logo"
+              width={100}
+              height={40}
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">

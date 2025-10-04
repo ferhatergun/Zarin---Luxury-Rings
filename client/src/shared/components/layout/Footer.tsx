@@ -9,6 +9,7 @@ import {
   EnvironmentOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
+import Image from "next/image";
 
 const { Footer: AntFooter } = Layout;
 const { Title, Text } = Typography;
@@ -46,9 +47,11 @@ const Footer = () => {
           <Col xs={24} sm={12} lg={6}>
             <div className="mb-6">
               <Link href="/" className="flex items-center space-x-2 mb-4 group cursor-pointer">
-                <img
+                <Image
                   src="/logo.png"
                   alt="Zarin Logosu"
+                  width={120}
+                  height={40}
                   className="w-32 object-contain"
                 />
               </Link>
