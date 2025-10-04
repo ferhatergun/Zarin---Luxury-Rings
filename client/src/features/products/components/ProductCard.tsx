@@ -22,13 +22,21 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="group relative bg-white transition-all duration-300 h-full flex flex-col">
       <div className="relative aspect-square bg-gray-300 mb-3 md:mb-4 rounded-3xl overflow-hidden">
-        <Image
-          src={product.images[selectedColor]}
-          alt={product.name}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
-          sizes="(max-width: 480px) 90vw, (max-width: 768px) 45vw, (max-width: 1200px) 33vw, 25vw"
-        />
+        {colorOptions.map((option) => (
+          <Image
+            key={option.value}
+            src={product.images[option.value]}
+            alt={`${product.name} - ${option.label}`}
+            fill
+            priority={option.value === 'yellow'}
+            className={`object-cover group-hover:scale-105 transition-all duration-500 ${
+              selectedColor === option.value
+                ? 'opacity-100 z-10'
+                : 'opacity-0 z-0'
+            }`}
+            sizes="(max-width: 480px) 90vw, (max-width: 768px) 45vw, (max-width: 1200px) 33vw, 25vw"
+          />
+        ))}
       </div>
 
       <div className="px-1 md:px-2 flex-1 flex flex-col">
