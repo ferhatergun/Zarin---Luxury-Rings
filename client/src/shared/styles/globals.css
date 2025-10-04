@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Avenir Light';
+  src: url('/Fonts/avenir/Avenir-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Book';
+  src: url('/Fonts/avenir/Avenir-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Roman';
+  src: url('/Fonts/avenir/Avenir-Roman.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Medium';
+  src: url('/Fonts/avenir/Avenir-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Heavy';
+  src: url('/Fonts/avenir/Avenir-Heavy.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Black';
+  src: url('/Fonts/avenir/Avenir-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat Light';
+  src: url('/Fonts/montserat/Montserrat-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url('/Fonts/montserat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat Medium';
+  src: url('/Fonts/montserat/Montserrat-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat SemiBold';
+  src: url('/Fonts/montserat/Montserrat-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url('/Fonts/montserat/Montserrat-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --font-avenir-light: 'Avenir Light', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-avenir-book: 'Avenir Book', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-avenir-roman: 'Avenir Roman', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-avenir-medium: 'Avenir Medium', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-avenir-heavy: 'Avenir Heavy', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-avenir-black: 'Avenir Black', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --font-montserrat-light: 'Montserrat Light', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-montserrat-regular: 'Montserrat Regular', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-montserrat-medium: 'Montserrat Medium', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-montserrat-semibold: 'Montserrat SemiBold', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-montserrat-bold: 'Montserrat Bold', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-montserrat-regular);
+
+  --font-family-avenir-light: var(--font-avenir-light);
+  --font-family-avenir-book: var(--font-avenir-book);
+  --font-family-avenir-roman: var(--font-avenir-roman);
+  --font-family-avenir-medium: var(--font-avenir-medium);
+  --font-family-avenir-heavy: var(--font-avenir-heavy);
+  --font-family-avenir-black: var(--font-avenir-black);
+
+  --font-family-montserrat-light: var(--font-montserrat-light);
+  --font-family-montserrat-regular: var(--font-montserrat-regular);
+  --font-family-montserrat-medium: var(--font-montserrat-medium);
+  --font-family-montserrat-semibold: var(--font-montserrat-semibold);
+  --font-family-montserrat-bold: var(--font-montserrat-bold);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat-regular);
+}
+
+.swiper {
+  overflow: hidden !important;
+}
+
+@media (min-width: 768px) {
+  .swiper {
+    overflow: visible !important;
+  }
+}
+
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.swiper-pagination {
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  background: #D1D5DB !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #374151 !important;
+  width: 24px !important;
+  border-radius: 4px !important;
+}
+
+.swiper-button-disabled {
+  opacity: 0.3 !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+}
+
+.footer-custom-link {
+  @apply text-gray-500 text-sm no-underline transition-colors duration-300;
+}
+
+.footer-custom-link:hover {
+  @apply text-gray-700 underline;
+}
+
